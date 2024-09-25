@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        #wrap_body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* canvasを常に中央に固定する */
+        canvas {
+            position: fixed; /* スクロールに影響されない固定表示 */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 画面の中央に配置 */
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* 背景に表示するため */
+        }
+
+        /* 縦に長くするためのセクション */
+        .section {
+            width: 100%;
+            height: 100vh; /* 1スクリーン分の高さ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap_body">
+        <canvas id="background-canvas"></canvas>
+        
+        <div id="wrap_topmenu">
+            <!-- メニュー内容 -->
+        </div>
+
+        <div id="wrap_top">
+            <!-- トップ部分の内容 -->
+        </div>
+
+        <!-- 縦に長くするための複数のセクション -->
+        <div class="section">Section 1</div>
+        <div class="section">Section 2</div>
+        <div class="section">Section 3</div>
+        <div class="section">Section 4</div>
+        <div class="section">Section 5</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
